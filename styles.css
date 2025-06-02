@@ -207,7 +207,7 @@ body {
   img{
     display: block;
     grid-column: 2;
-    width: 500px;
+    width: 450px;
     height: auto;
     margin: 0 auto;
   }
