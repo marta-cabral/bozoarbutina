@@ -240,7 +240,6 @@ body {
   
     .grid-container > div {
       padding-bottom: 1em;
-      text-align: center; /* Opcional: centraliza texto */
     }
   
     .grid-container img {
