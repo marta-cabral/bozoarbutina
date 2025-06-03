@@ -75,6 +75,10 @@ h2{
     margin: 0;
   }
 
+  p, h2, a{
+    font-size: 2rem;
+  }
+
   img{
     margin: 2em 0 2em 0;
   }
