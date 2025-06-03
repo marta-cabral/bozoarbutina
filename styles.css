@@ -148,10 +148,11 @@
 
   body {
     max-width: 4000px;
-    margin: 0 auto;
+    height: 100%;
     font-family: NeueHaasGrotesk, Helvetica, sans-serif;
     background-color: #0372F8;
     width: 100%;
+    overflow-x: hidden;
   }
 
   .sections {
@@ -182,6 +183,7 @@
 
   nav{
     display: flex;
+    flex: 0 0 auto;
     justify-content: space-between;
     padding-top: 1em !important;
   }
@@ -209,6 +211,35 @@
     background-color: grey;
     grid-column: 2;
     margin: 3.5em auto;
+  }
+
+    /* Ocupa toda a altura da janela, tirando o espaço do nav */
+  main {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 4em); /* ajusta se nav for maior */
+    overflow: hidden;
+  }
+
+  /* Secção da imagem ocupa o espaço restante */
+  .image-section {
+    flex: 1 1 auto; /* cresce para preencher o espaço */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0;
+  }
+
+  /* Imagem ajustável */
+  .image-section img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  /* Margem inferior do bloco de texto */
+  .text-section {
+    margin-bottom: 1em;
   }
 
   @media (max-width:760px){
