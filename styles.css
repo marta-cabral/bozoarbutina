@@ -232,10 +232,19 @@ body {
   }
 
   @media (max-width:760px){
-    .grid-container {
-      display: flex;
-      flex-direction: column;
-    }
+    @media (max-width: 760px) {
+      .grid-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      img {
+        width: 150px;
+        height: auto;
+        margin: 0 auto;
+      }
+    
 
     .grid-container > div{
       padding-bottom: 1em;
@@ -247,10 +256,6 @@ body {
 
     nav{
       align-items: center;
-    }
-
-    img{
-      width: 150px;
     }
 
     #rectangle{
