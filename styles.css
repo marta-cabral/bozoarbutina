@@ -146,29 +146,17 @@
   src: url(fonts/NeueHaasGroteskText-Medium.otf);
 }
 
-html{
-  height: 100%;
-}  
-
-body {
+  body {
     max-width: 4000px;
     margin: 0 auto;
     font-family: NeueHaasGrotesk, Helvetica, sans-serif;
     background-color: #0372F8;
     width: 100%;
-    height: 100%;
   }
 
   .sections {
     /* width: 100%; */
     padding: 0 1em;
-  }
-
-  .page-wrapper {
-    min-height: 100vh; /* take full height of viewport */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* distributes space */
   }
 
   /* TYPE SYSTEM */
@@ -185,8 +173,6 @@ body {
     color: #000000;
     margin: 0 0;
   }
-
-  /* TYPE SYSTEM */
 
   .grid-container {
     display: grid;
@@ -217,12 +203,6 @@ body {
     color: black;
   }
 
-  /* Make sure the bottom text stays at the bottom */
-  .bottom-section {
-    margin-top: auto; /* pushes it to the bottom */
-    padding-bottom: 2em;
-  }
-
   #rectangle{
     width: 400px;
     height:400px;
@@ -242,7 +222,7 @@ body {
     }
 
     h1, h2, p, a{
-      font-size: 14px;
+      font-size: 13px;
     }
 
     nav{
