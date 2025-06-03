@@ -193,9 +193,9 @@
   img{
     display: block;
     grid-column: 2;
-    width: 710px;
-    height: auto;
-    margin: 0 auto;
+    width: auto;
+    height: 500px;
+    margin: 1em auto;
   }
 
   a{
