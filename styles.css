@@ -1,274 +1,93 @@
-{
+* {
   margin: 0;
   padding: 0;
-  border: 0;/* box-sizing: border-box; / /<--consider using this one too*/
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0076f9; /* similar to the blue in your screenshot */
+  color: #000;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav.sections {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+}
+
+nav.sections a {
+  text-decoration: none;
+  color: black;
+  margin: 0 1rem;
+  font-weight: normal;
+}
+
+img {
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+section.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+h2{
+  font-size:  0.9rem;
+  color: #000000;
+  margin: 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  section.grid-container {
+    grid-template-columns: 1fr;
+    text-align: left;
   }
-  
-  /* comentário rápido Cmd + Shift + 7 /
-  
-  html,
-  body,
-  div,
-  span,
-  applet,
-  object,
-  iframe,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  blockquote,
-  pre,
-  a,
-  abbr,
-  acronym,
-  address,
-  big,
-  cite,
-  code,
-  del,
-  dfn,
-  em,
-  img,
-  ins,
-  kbd,
-  q,
-  s,
-  samp,
-  small,
-  strike,
-  strong,
-  sub,
-  sup,
-  tt,
-  var,
-  b,
-  u,
-  i,
-  center,
-  dl,
-  dt,
-  dd,
-  ol,
-  ul,
-  li,
-  fieldset,
-  form,
-  label,
-  legend,
-  table,
-  caption,
-  tbody,
-  tfoot,
-  thead,
-  tr,
-  th,
-  td,
-  article,
-  aside,
-  canvas,
-  details,
-  embed,
-  figure,
-  figcaption,
-  footer,
-  header,
-  hgroup,
-  menu,
-  nav,
-  output,
-  ruby,
-  section,
-  summary,
-  time,
-  mark,
-  audio,
-  video {
+
+  nav.sections a{
     margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-  }
-  / HTML5 display-role reset for older browsers */
-  article,
-  aside,
-  details,
-  figcaption,
-  figure,
-  footer,
-  header,
-  hgroup,
-  menu,
-  nav,
-  section {
-    display: block;
-  }
-  body {
-    line-height: 1;
-  }
-  ol,
-  ul {
-    list-style: none;
-  }
-  blockquote,
-  q {
-    quotes: none;
-  }
-  blockquote:before,
-  blockquote:after,
-  q:before,
-  q:after {
-    content: "";
-    content: none;
-  }
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-
-@font-face {
-    font-family: NeueHaasGrotesk;
-    src: url(fonts/NeueHaasGroteskText-Regular.otf);
-  }
-
-@font-face {
-    font-family: NeueHaasGrotesk-Bold;
-    src: url(fonts/NeueHaasGroteskText-Bold.otf);
-}
-
-@font-face {
-  font-family: NeueHaasGrotesk-Medium;
-  src: url(fonts/NeueHaasGroteskText-Medium.otf);
-}
-
-  body {
-    max-width: 4000px;
-    height: 100%;
-    font-family: NeueHaasGrotesk, Helvetica, sans-serif;
-    background-color: #0372F8;
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  .sections {
-    /* width: 100%; */
-    padding: 0 1em;
-  }
-
-  /* TYPE SYSTEM */
-
-  h2{
-    font-size: 16px;
-    color: #000000;
-    margin: 0 0;
-    font-family: NeueHaasGrotesk-Medium;
-  }
-
-  h1, p{
-    font-size: 16px;
-    color: #000000;
-    margin: 0 0;
-  }
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 35px;
-  }
-
-  nav{
-    display: flex;
-    flex: 0 0 auto;
-    justify-content: space-between;
-    padding-top: 1em !important;
-  }
-
-  nav > div > a{
-    padding-left: 0.5em;
   }
 
   img{
-    display: block;
-    grid-column: 2;
-    width: auto;
-    height: 500px;
-    margin: 1em auto;
+    margin: 2em 0 2em 0;
   }
 
-  a{
-    text-decoration: none;
-    color: black;
+  section.grid-container {
+    padding: 0 0 2em 0;
+  }
+  
+  #shipimg{
+    max-width: 50vh;
   }
 
-  #rectangle{
-    width: 400px;
-    height:400px;
-    background-color: grey;
-    grid-column: 2;
-    margin: 3.5em auto;
+  #abtimg{
+    max-width: 50vh;
   }
-
-    /* Ocupa toda a altura da janela, tirando o espaço do nav */
-  main {
-    display: flex;
-    flex-direction: column;
-    min-height: calc(100vh - 4em); /* ajusta se nav for maior */
-    overflow: hidden;
-  }
-
-  /* Secção da imagem ocupa o espaço restante */
-  .image-section {
-    flex: 1 1 auto; /* cresce para preencher o espaço */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1em 0;
-  }
-
-  /* Imagem ajustável */
-  .image-section img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-
-  /* Margem inferior do bloco de texto */
-  .text-section {
-    margin-bottom: 1em;
-  }
-
-  @media (max-width:760px){
-    .grid-container {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .grid-container > div{
-      padding-bottom: 1em;
-    }
-
-    h1, h2, p, a{
-      font-size: 16px;
-    }
-
-    nav{
-      align-items: center;
-    }
-
-    img{
-      height: 250px;
-      width: auto;
-      margin: 1em auto;
-    }
-
-    #rectangle{
-      width: 200px;
-      height:200px;
-      margin: 2em auto;
-    }
-  }
+}
